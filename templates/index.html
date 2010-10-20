@@ -1,0 +1,10 @@
+
+<table id="tasklist">
+$for item in items:
+	<tr><td>$item.author</td><td>$item.content</td><td>$item.created</td></tr>
+</table>
+
+<h2>Add New</h2>
+<form action="/" method="post">
+	<p><input type="text" name="content"> <input type="submit" name="add"></p>
+</form>

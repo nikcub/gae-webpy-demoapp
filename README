@@ -1,0 +1,22 @@
+This application is a demo of Google App Engine and using the web.py framework on that platform. If you are interested in using web.py on GAE, this would be an ideal starting point.
+
+I have included:
+
+ * Demo templates (a base template and examples)
+ * jQuery
+ * CSS template 
+ * demo js
+ * demonstration models 
+ * demo of including other libraries in /vendors
+
+Install
+
+Grab the App Engine SDK:
+
+  http://code.google.com/appengine/downloads.html
+
+Then run the demo via:
+
+  $ cd gae-webpy-demoapp
+  $ dev_appserver.py .
+

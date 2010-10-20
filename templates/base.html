@@ -1,0 +1,39 @@
+$def with (page)
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<title>$page.title</title>
+	<link id="css-reset" rel="stylesheet" href="/css/reset.css" type="text/css">
+	<link id="css-core" rel="stylesheet" href="/css/style.css" type="text/css">
+	<script src="/js/jquery-1.4.3.min.js"></script>
+	<script src="/js/app.js"></script>
+</head>
+<body>
+<header>
+    <h1><a href="/">Demo Todo App</a></h1>      
+	<nav>
+		<ul>
+			<li><a href="/admin">Home</a></li>
+		</ul>
+	</nav>
+</header>
+<div id="user">
+	$if page.user:
+		<p>Welcome $page.user [<a href="$page.userlogout">logout</a>]</p>
+	$else:
+		<p><a href="$page.userlogin">Sign in or register</a></p>
+	
+	$if page.admin:
+		<p><a href="/_ah/admin/">Admin</a></p>
+	
+</div>
+<div id="main">
+	<div id="message"></div>
+	$:page
+</div>
+<footer>
+	<p>Footer</p>
+</footer>
+</body>
+</html>
